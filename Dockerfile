@@ -1,6 +1,7 @@
 FROM ubuntu:18.04
 LABEL maintainer="zaberchann"
 
+WORKDIR /
 RUN apt-get update \
     && apt-get install -y vim wget openssh-server \
     && rm -rf /var/lib/apt/lists/*
@@ -12,11 +13,9 @@ RUN mkdir /npc \
     && tar -zxf linux_amd64_client.tar.gz  \
     && rm -f linux_amd64_client.tar.gz
 
-COPY entrypoint.sh /usr/local/bin/
+COPY entrypoint.sh /usr/local/bin
 
-ENV server
-ENV vkey
-ENV type=tcp
+ENV server='' vkey='' type='tcp'
 
 
 
