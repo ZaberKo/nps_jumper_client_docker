@@ -1,5 +1,6 @@
 FROM ubuntu:18.04
 LABEL maintainer="zaberchann"
+ARG npc_version=v0.25.2
 
 WORKDIR /
 RUN apt-get update \
@@ -9,7 +10,7 @@ RUN apt-get update \
 
 RUN mkdir /npc \
     && cd /npc \
-    && wget https://github.com/ehang-io/nps/releases/download/v0.25.4/linux_amd64_client.tar.gz \
+    && wget https://github.com/ehang-io/nps/releases/download/${npc_version}/linux_amd64_client.tar.gz \
     && tar -zxf linux_amd64_client.tar.gz  \
     && rm -f linux_amd64_client.tar.gz
 
