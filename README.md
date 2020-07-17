@@ -1,6 +1,6 @@
 # nps_jumper_client_docker
 
-ubuntu18.04 + nps client 0.26.7 + sshd
+ubuntu18.04 + nps client 0.26.8 + sshd
 
 See [dockerhub](https://hub.docker.com/r/zaberchann/nps_jumper_client)
 

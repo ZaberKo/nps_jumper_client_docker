@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 LABEL maintainer="zaberchann"
-ARG npc_version=v0.26.7
+ARG npc_version=v0.26.8
 
 WORKDIR /
 RUN apt-get update \
