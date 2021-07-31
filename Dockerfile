@@ -4,7 +4,7 @@ ARG npc_version=v0.26.10
 
 WORKDIR /
 RUN apt-get update \
-    && apt-get install -y vim wget openssh-server \
+    && apt-get install -y neovim wget openssh-server \
     && rm -rf /var/lib/apt/lists/*
 
 
